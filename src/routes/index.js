@@ -12,7 +12,7 @@ router.get("/", (req, res, next) => {
 router.post("/", (req, res, next) => {
     axios({
         method: "post",
-        url: "http://localhost:5000/analyse/sentiment",
+        url: `http://${process.env.ANALYTICS_IP}:3002/analyse/sentiment`,
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
